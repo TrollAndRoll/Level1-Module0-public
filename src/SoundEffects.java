@@ -14,16 +14,22 @@ public class SoundEffects implements ActionListener
 		new SoundEffects().CreateUI();
 		
 	}
+	JButton B1 = new JButton("Drum Sound");
+	JButton B2 = new JButton("Other Drum Sound");
+	JButton B3 = new JButton("Third Drum Sound");
+	JButton B4 = new JButton("You get the idea");
+	
 	public void CreateUI()
 	{
 		JFrame yes = new JFrame();
+		yes.setTitle("Sound Effects");
+		yes.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		JPanel no = new JPanel();
+		yes.setSize(500,500);
+		no.setSize(500,500);
 		yes.add(no);
 		
-		JButton B1 = new JButton();
-		JButton B2 = new JButton();
-		JButton B3 = new JButton();
-		JButton B4 = new JButton();
+		
 		B1.setSize(100,100);
 		B2.setSize(100,100);
 		B3.setSize(100,100);
@@ -32,6 +38,14 @@ public class SoundEffects implements ActionListener
 		B2.addActionListener(this);
 		B3.addActionListener(this);
 		B4.addActionListener(this);
+		
+		no.add(B1);
+		no.add(B2);
+		no.add(B3);
+		no.add(B4);
+		
+		yes.setVisible(true);
+		yes.pack();
 	}
 	
 	private void playSound(String fileName) 
@@ -42,7 +56,23 @@ public class SoundEffects implements ActionListener
 	@Override
 	public void actionPerformed(ActionEvent arg0) 
 	{
+		JButton buttonPressed = (JButton) arg0.getSource();
 		
-		
+		if(buttonPressed == B1)
+		{
+			playSound("drumsound.wav");
+		}
+		if(buttonPressed == B2)
+		{
+			playSound("drumsound1.wav");
+		}
+		if(buttonPressed == B3)
+		{
+			playSound("drumsound2.wav");
+		}
+		if(buttonPressed == B4)
+		{
+			playSound("drumbsound3.wav");
+		}
 	}
 }
