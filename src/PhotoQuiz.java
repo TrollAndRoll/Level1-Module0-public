@@ -5,9 +5,9 @@
 
 
 import java.awt.Component;
-import java.awt.ComponentOrientation;
+//import java.awt.ComponentOrientation;
 import java.awt.FlowLayout;
-import java.awt.Frame;
+//import java.awt.Frame;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.net.MalformedURLException;
